@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://freesoftware.fsf.org/download/adonthell/wastesedge-0.3.%{version}.tar.gz
+# Source0-md5:	c208c4c7aa2e8c97ec7b27a5bf4f2cd0
 URL:		http://adonthell.linuxgames.com/download/index.shtml
 BuildRequires:	adonthell
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
