@@ -4,7 +4,7 @@ Name:		adonthell-maps
 Version:	1
 Release:	1
 License:	GPL
-Group:		X11/Applications/Games/Data
+Group:		X11/Applications/Games
 Source0:	http://freesoftware.fsf.org/download/adonthell/wastesedge-0.3.%{version}.tar.gz
 URL:		http://adonthell.linuxgames.com/download/index.shtml
 BuildRequires:	adonthell
@@ -23,7 +23,7 @@ Paczka z mapami dla Adonthell'a
 %package wastesedge
 Summary:	Waste's Edge map
 Summary(pl):	Mapa Waste's Edge
-Group:		%{group}
+Group:		X11/Applications/Games
 
 %description wastesedge
 As a loyal servant of the elven Lady Silverhair, you arrive at the
@@ -32,6 +32,14 @@ negotiations with the dwarish merchant Bjarn Fingolson. But not all is
 well at Waste's Edge, and soon you are confronted with circumstances
 that are about to destroy your mistress' high reputation. And you are
 the only one to avert this ...
+
+%description wastesedge -l pl
+Jako lojalny s³uga elfiej Srebrzystow³osej Pani zostajesz wys³any do
+odleg³ejgo miasteczka kupieckiego, Waste's Edge, w celu negocjacji z
+krasnoludzkim kupcem Bjarnem Fingolsonem. Lecz w Waste's Edge nie
+dzieje siê najlepiej, prêdko znajdujesz siê w okoliczno¶ciach mog±cych
+zniszczyæ dobr± reputacjê twej Pani. I tylko ty mo¿esz temu
+zapobiec...
 
 %prep
 %setup -q -c -a0
