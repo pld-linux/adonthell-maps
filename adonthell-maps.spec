@@ -1,5 +1,5 @@
-Summary:	Maps for Adonthell game engine.
-Summary(pl):	Mapy dla Adonthell'a
+Summary:	Maps for Adonthell game engine
+Summary(pl):	Mapy dla Adonthella
 Name:		adonthell-maps
 Version:	1
 Release:	1
@@ -11,14 +11,14 @@ BuildRequires:	adonthell
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix		/usr/X11R6
-%define         _bindir         %{_prefix}/bin/
-%define         _gamedatadir    share/adonthell/games/
+%define         _bindir         %{_prefix}/bin
+%define         _gamedatadir    %{_prefix}/share/adonthell/games
 
 %description
-Map packs for Adonthell game
+Map packs for Adonthell game.
 
 %description -l pl
-Paczka z mapami dla Adonthell'a
+Paczka z mapami dla Adonthella.
 
 %package wastesedge
 Summary:	Waste's Edge map
@@ -42,26 +42,30 @@ zniszczyæ dobr± reputacjê twej Pani. I tylko ty mo¿esz temu
 zapobiec...
 
 %prep
-%setup -q -c -a0
+%setup -q -n wastesedge-0.3.%{version}
 
 %build
-cd wastesedge-0.3.1
 %configure2_13
 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}/%{_gamedatadir} $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT{%{_prefix}/%{_gamedatadir}/wastesedge/{audio,gfx,maps,scripts}}
-cd wastesedge-0.3.1
-%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} bindir=$RPM_BUILD_ROOT%{_bindir} gamedatadir=$RPM_BUILD_ROOT%{_prefix}/%{_gamedatadir}/wastesedge/ install
+install -d $RPM_BUILD_ROOT%{_bindir} \
+	$RPM_BUILD_ROOT{%{_gamedatadir}/wastesedge/{audio,gfx,maps,scripts}}
+
+%{__make} install \
+	prefix=$RPM_BUILD_ROOT%{_prefix} \
+	bindir=$RPM_BUILD_ROOT%{_bindir} \
+	gamedatadir=$RPM_BUILD_ROOT%{_gamedatadir}/wastesedge/
+
 gzip -9nf README AUTHORS PLAYING
+
 %clean
 rm -fr $RPM_BUILD_ROOT
 
 %files wastesedge
 %defattr(644,root,root,755)
-#%doc *.gz
-%{_prefix}/%{_gamedatadir}/
-%attr(755,root,root)%{_bindir}/adonthell-wastesedge
+%doc *.gz
+%{_gamedatadir}
+%attr(755,root,root) %{_bindir}/adonthell-wastesedge
