@@ -59,13 +59,11 @@ install -d $RPM_BUILD_ROOT%{_bindir} \
 	bindir=$RPM_BUILD_ROOT%{_bindir} \
 	gamedatadir=$RPM_BUILD_ROOT%{_gamedatadir}/wastesedge/
 
-gzip -9nf README AUTHORS PLAYING
-
 %clean
 rm -fr $RPM_BUILD_ROOT
 
 %files wastesedge
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README AUTHORS PLAYING
 %{_gamedatadir}
 %attr(755,root,root) %{_bindir}/adonthell-wastesedge
