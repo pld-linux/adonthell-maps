@@ -1,7 +1,7 @@
 Summary:	Maps for Adonthell game engine
 Summary(pl):	Mapy dla Adonthella
 Name:		adonthell-maps
-Version:	1
+Version:	3
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
@@ -52,12 +52,17 @@ zapobiec...
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir} \
-	$RPM_BUILD_ROOT{%{_gamedatadir}/wastesedge/{audio,gfx,maps,scripts}}
+	$RPM_BUILD_ROOT%{_gamedatadir}/wastesedge/{audio,gfx,maps,scripts} \
+	$RPM_BUILD_ROOT%{_gamedatadir}/wastesedge/gettext/po \
+	$RPM_BUILD_ROOT%{_pixmapsdir}
 
 %{__make} install \
+	datadir=$RPM_BUILD_ROOT%{_gamedatadir}/%{name} \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	bindir=$RPM_BUILD_ROOT%{_bindir} \
-	gamedatadir=$RPM_BUILD_ROOT%{_gamedatadir}/wastesedge/
+	gamedatadir=$RPM_BUILD_ROOT%{_gamedatadir}/wastesedge/ \
+	pixmapdir=$RPM_BUILD_ROOT%{_pixmapsdir} \
+	gettextsrcdir=$RPM_BUILD_ROOT%{_gamedatadir}/wastesedge/gettext/po
 
 %clean
 rm -fr $RPM_BUILD_ROOT
@@ -66,4 +71,5 @@ rm -fr $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README AUTHORS PLAYING
 %{_gamedatadir}
+%{_pixmapsdir}
 %attr(755,root,root) %{_bindir}/adonthell-wastesedge
