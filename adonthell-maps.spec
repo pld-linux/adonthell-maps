@@ -11,8 +11,8 @@ URL:		http://adonthell.linuxgames.com/download/index.shtml
 BuildRequires:	adonthell
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _bindir         %{_prefix}/bin
-%define         _gamedatadir    %{_prefix}/share/adonthell/games
+%define		_bindir		%{_prefix}/bin
+%define		_gamedatadir	%{_prefix}/share/adonthell/games
 
 %description
 Map packs for Adonthell game.
