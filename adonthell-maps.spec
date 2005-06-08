@@ -1,14 +1,16 @@
 Summary:	Maps for Adonthell game engine
 Summary(pl):	Mapy dla Adonthella
 Name:		adonthell-maps
-Version:	3
+Version:	0.3.3
 Release:	1
+Epoch:		1
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	http://freesoftware.fsf.org/download/adonthell/wastesedge-0.3.%{version}.tar.gz
+Source0:	http://freesoftware.fsf.org/download/adonthell/wastesedge-%{version}.tar.gz
 # Source0-md5:	c208c4c7aa2e8c97ec7b27a5bf4f2cd0
 URL:		http://adonthell.linuxgames.com/download/index.shtml
 BuildRequires:	adonthell
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		%{_prefix}/bin
@@ -42,9 +44,10 @@ zniszczyæ dobr± reputacjê twej Pani. I tylko ty mo¿esz temu
 zapobiec...
 
 %prep
-%setup -q -n wastesedge-0.3.%{version}
+%setup -q -n wastesedge-%{version}
 
 %build
+cp -f /usr/share/automake/config.sub .
 %configure2_13
 
 %{__make}
