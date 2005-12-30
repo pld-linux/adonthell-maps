@@ -2,7 +2,7 @@ Summary:	Maps for Adonthell game engine
 Summary(pl):	Mapy dla Adonthella
 Name:		adonthell-maps
 Version:	0.3.3
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Games
@@ -13,7 +13,6 @@ BuildRequires:	adonthell
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_bindir		%{_prefix}/bin
 %define		_gamedatadir	%{_prefix}/share/adonthell/games
 
 %description
@@ -73,6 +72,6 @@ rm -fr $RPM_BUILD_ROOT
 %files wastesedge
 %defattr(644,root,root,755)
 %doc README AUTHORS PLAYING
-%{_gamedatadir}
-%{_pixmapsdir}
+%{_gamedatadir}/wastesedge
+%{_pixmapsdir}/*
 %attr(755,root,root) %{_bindir}/adonthell-wastesedge
