@@ -1,5 +1,5 @@
 Summary:	Maps for Adonthell game engine
-Summary(pl):	Mapy dla Adonthella
+Summary(pl.UTF-8):   Mapy dla Adonthella
 Name:		adonthell-maps
 Version:	0.3.3
 Release:	3
@@ -18,12 +18,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Map packs for Adonthell game.
 
-%description -l pl
+%description -l pl.UTF-8
 Paczka z mapami dla Adonthella.
 
 %package wastesedge
 Summary:	Waste's Edge map
-Summary(pl):	Mapa Waste's Edge
+Summary(pl.UTF-8):   Mapa Waste's Edge
 Group:		X11/Applications/Games
 
 %description wastesedge
@@ -34,12 +34,12 @@ well at Waste's Edge, and soon you are confronted with circumstances
 that are about to destroy your mistress' high reputation. And you are
 the only one to avert this ...
 
-%description wastesedge -l pl
-Jako lojalny s³uga elfiej Srebrzystow³osej Pani zostajesz wys³any do
-odleg³ejgo miasteczka kupieckiego, Waste's Edge, w celu negocjacji z
+%description wastesedge -l pl.UTF-8
+Jako lojalny sÅ‚uga elfiej SrebrzystowÅ‚osej Pani zostajesz wysÅ‚any do
+odlegÅ‚ejgo miasteczka kupieckiego, Waste's Edge, w celu negocjacji z
 krasnoludzkim kupcem Bjarnem Fingolsonem. Lecz w Waste's Edge nie
-dzieje siê najlepiej, prêdko znajdujesz siê w okoliczno¶ciach mog±cych
-zniszczyæ dobr± reputacjê twej Pani. I tylko ty mo¿esz temu
+dzieje siÄ™ najlepiej, prÄ™dko znajdujesz siÄ™ w okolicznoÅ›ciach mogÄ…cych
+zniszczyÄ‡ dobrÄ… reputacjÄ™ twej Pani. I tylko ty moÅ¼esz temu
 zapobiec...
 
 %prep
