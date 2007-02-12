@@ -1,5 +1,5 @@
 Summary:	Maps for Adonthell game engine
-Summary(pl.UTF-8):   Mapy dla Adonthella
+Summary(pl.UTF-8):	Mapy dla Adonthella
 Name:		adonthell-maps
 Version:	0.3.3
 Release:	3
@@ -23,7 +23,7 @@ Paczka z mapami dla Adonthella.
 
 %package wastesedge
 Summary:	Waste's Edge map
-Summary(pl.UTF-8):   Mapa Waste's Edge
+Summary(pl.UTF-8):	Mapa Waste's Edge
 Group:		X11/Applications/Games
 
 %description wastesedge
