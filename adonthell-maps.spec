@@ -67,7 +67,7 @@ install -d $RPM_BUILD_ROOT%{_bindir} \
 	gettextsrcdir=$RPM_BUILD_ROOT%{_gamedatadir}/wastesedge/gettext/po
 
 %clean
-rm -fr $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %files wastesedge
 %defattr(644,root,root,755)
